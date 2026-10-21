@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>陳聖諺 | 個人介紹 - CHEN SHENG-YAN</title>
+  <meta name="description" content="陳聖諺的個人自我介紹網頁。大帥哥、熱血拳擊手、遊戲雙棲玩家。打過CTBF全國菁英拳擊聯賽。">
+  
+  <!-- Google Fonts: 日系字體與現代黑體 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+TC:wght@300;400;600;700;900&family=Shippori+Mincho:wght@500;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       CSS 變數設定 (日系紅黑主色調)
+       ========================================================================== */
+    :root {
+      --bg-dark: #0a0a0d;
+      --bg-card: rgba(18, 18, 24, 0.75);
+      --bg-card-hover: rgba(26, 26, 36, 0.9);
+      --crimson-core: #ff1e42;
+      --crimson-deep: #b3001f;
+      --crimson-glow: rgba(255, 30, 66, 0.35);
+      --crimson-soft: rgba(255, 30, 66, 0.12);
+      --gold-accent: #e5b567;
+      --text-main: #f5f5f7;
+      --text-muted: #9fa3af;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-crimson: rgba(255, 30, 66, 0.35);
+      --font-sans: 'Noto Sans TC', sans-serif;
+      --font-display: 'Dela Gothic One', 'Noto Sans TC', sans-serif;
+      --font-mincho: 'Shippori Mincho', serif;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* ==========================================================================
+       基礎重置與背景質感
+       ========================================================================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      overflow-x: hidden;
+    }
+
+    body {
+      min-height: 100vh;
+      line-height: 1.7;
+      position: relative;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(179, 0, 31, 0.18) 0%, transparent 40%),
+        radial-gradient(circle at 85% 75%, rgba(255, 30, 66, 0.12) 0%, transparent 45%),
+        linear-gradient(to bottom, #0a0a0d 0%, #101017 50%, #0a0a0d 100%);
+      background-attachment: fixed;
+    }
+
+    /* 日式幾何背景微紋理 */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+      background-size: 32px 32px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* 頂部導航列 */
+    .nav-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(10, 10, 13, 0.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+      z-index: 100;
+      transition: var(--transition);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+
+    /* 日式落款印章圖示 */
+    .hanko-seal {
+      width: 32px;
+      height: 32px;
+      background: var(--crimson-core);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 16px;
+      border-radius: 4px;
+      box-shadow: 0 0 12px var(--crimson-glow);
+      border: 1.5px solid rgba(255, 255, 255, 0.6);
+      letter-spacing: -1px;
+      user-select: none;
+    }
+
+    .nav-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: var(--transition);
+      position: relative;
+      padding: 4px 0;
+    }
+
+    .nav-links a:hover {
+      color: var(--crimson-core);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: var(--crimson-core);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* ==========================================================================
+       通用容器與排版
+       ========================================================================== */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    section {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    /* 日系標題風格 */
+    .section-header {
+      text-align: center;
+      margin-bottom: 56px;
+      position: relative;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--crimson-core);
+      background: var(--crimson-soft);
+      padding: 4px 14px;
+      border-radius: 30px;
+      border: 1px solid var(--border-crimson);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      letter-spacing: 2px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .section-title::before,
+    .section-title::after {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--crimson-core));
+    }
+
+    .section-title::after {
+      background: linear-gradient(270deg, transparent, var(--crimson-core));
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-top: 8px;
+      letter-spacing: 1px;
+    }
+
+    /* ==========================================================================
+       HERO 首頁視覺區塊
+       ========================================================================== */
+    .hero-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 100px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-wrapper {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+      gap: 40px;
+      width: 100%;
+    }
+
+    .hero-content {
+      position: relative;
+    }
+
+    /* 日式縱書裝飾籤標 */
+    .vertical-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 30, 66, 0.08);
+      border-left: 3px solid var(--crimson-core);
+      padding: 6px 14px;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      color: #ff8a9e;
+      margin-bottom: 20px;
+      font-family: var(--font-sans);
+    }
+
+    .hero-name-group {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .hero-name-en {
+      font-size: 0.9rem;
+      letter-spacing: 6px;
+      color: var(--crimson-core);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .hero-name {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 7vw, 4.8rem);
+      line-height: 1.1;
+      letter-spacing: 4px;
+      background: linear-gradient(135deg, #ffffff 40%, #ff4d6d 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* 一句話自我介紹：大帥哥徽章 */
+    .hero-quote-card {
+      background: linear-gradient(135deg, rgba(255, 30, 66, 0.15) 0%, rgba(20, 20, 28, 0.8) 100%);
+      border: 1px solid var(--border-crimson);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      margin: 28px 0;
+      position: relative;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .hero-quote-card::before {
+      content: "「";
+      position: absolute;
+      top: -12px;
+      left: 14px;
+      font-size: 2.2rem;
+      color: var(--crimson-core);
+      font-family: var(--font-mincho);
+      line-height: 1;
+    }
+
+    .hero-quote-card::after {
+      content: "」";
+      position: absolute;
+      bottom: -22px;
+      right: 14px;
+      font-size: 2.2rem;
+      color: var(--crimson-core);
+      font-family: var(--font-mincho);
+      line-height: 1;
+    }
+
+    .quote-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+    }
+
+    .quote-content {
+      font-size: clamp(1.4rem, 2.8vw, 2rem);
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .quote-highlight {
+      color: var(--crimson-core);
+      position: relative;
+      text-shadow: 0 0 16px var(--crimson-glow);
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 34px;
+    }
+
+    .hero-tag {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+      padding: 8px 18px;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+    }
+
+    .hero-tag:hover {
+      border-color: var(--crimson-core);
+      background: var(--crimson-soft);
+      transform: translateY(-2px);
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 30px;
+      border-radius: 40px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-decoration: none;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--crimson-core) 0%, var(--crimson-deep) 100%);
+      color: #fff;
+      box-shadow: 0 6px 20px var(--crimson-glow);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(255, 30, 66, 0.6);
+      filter: brightness(1.1);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-main);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-3px);
+    }
+
+    /* Hero 右側日式立體家紋/戰意圖騰 */
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .visual-circle-outer {
+      width: clamp(260px, 32vw, 360px);
+      height: clamp(260px, 32vw, 360px);
+      border-radius: 50%;
+      border: 2px dashed rgba(255, 30, 66, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      animation: rotateSlow 40s linear infinite;
+    }
+
+    @keyframes rotateSlow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .visual-circle-inner {
+      width: 82%;
+      height: 82%;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 30, 66, 0.25) 0%, rgba(15, 15, 22, 0.95) 70%);
+      border: 1px solid var(--border-crimson);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 50px var(--crimson-glow);
+      position: relative;
+      animation: counterRotate 40s linear infinite;
+    }
+
+    @keyframes counterRotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(-360deg); }
+    }
+
+    .visual-kanji {
+      font-family: var(--font-display);
+      font-size: clamp(4rem, 9vw, 6.5rem);
+      color: #fff;
+      line-height: 1;
+      text-shadow: 0 0 20px var(--crimson-core);
+    }
+
+    .visual-sub {
+      font-size: 0.8rem;
+      letter-spacing: 5px;
+      color: var(--gold-accent);
+      margin-top: 6px;
+      font-weight: 700;
+    }
+
+    .visual-floating-card {
+      position: absolute;
+      background: rgba(18, 18, 24, 0.9);
+      border: 1px solid var(--border-crimson);
+      backdrop-filter: blur(8px);
+      padding: 10px 16px;
+      border-radius: 12px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      z-index: 2;
+    }
+
+    .card-pos-1 {
+      top: 10%;
+      right: -10px;
+      animation: floatSlow 5s ease-in-out infinite;
+    }
+
+    .card-pos-2 {
+      bottom: 12%;
+      left: -15px;
+      animation: floatSlow 6s ease-in-out infinite 1.5s;
+    }
+
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* ==========================================================================
+       專長技能區塊 (拳擊為主)
+       ========================================================================== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 32px;
+      align-items: stretch;
+    }
+
+    .glass-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .glass-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--crimson-core), transparent);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .glass-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-crimson);
+      transform: translateY(-5px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5), 0 0 20px var(--crimson-soft);
+    }
+
+    .glass-card:hover::before {
+      opacity: 1;
+    }
+
+    .skill-main-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .icon-badge {
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(255, 30, 66, 0.2), rgba(179, 0, 31, 0.1));
+      border: 1px solid var(--border-crimson);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      color: var(--crimson-core);
+      flex-shrink: 0;
+    }
+
+    .skill-title-text h3 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .skill-title-text p {
+      font-size: 0.85rem;
+      color: var(--crimson-core);
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    .skill-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+
+    /* 技能進度條 / 戰鬥力雷達概念 */
+    .skill-meter-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .meter-item {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .meter-label-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .meter-val {
+      color: var(--crimson-core);
+      font-weight: 700;
+      font-family: monospace;
+    }
+
+    .meter-track {
+      width: 100%;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .meter-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--crimson-deep), var(--crimson-core));
+      border-radius: 10px;
+      width: 0%;
+      transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 0 10px var(--crimson-glow);
+    }
+
+    /* 右側擂台格鬥要訣展示 */
+    .tactics-box {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    .tactic-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-subtle);
+      border-left: 3px solid var(--crimson-core);
+      padding: 16px 20px;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+    }
+
+    .tactic-card:hover {
+      background: rgba(255, 30, 66, 0.06);
+      transform: translateX(6px);
+    }
+
+    .tactic-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .tactic-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       三大興趣區塊
+       ========================================================================== */
+    .hobbies-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .hobby-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 36px 28px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      transition: var(--transition);
+      backdrop-filter: blur(12px);
+    }
+
+    .hobby-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--border-crimson);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 25px var(--crimson-soft);
+    }
+
+    .hobby-icon-wrap {
+      width: 76px;
+      height: 76px;
+      border-radius: 20px;
+      background: radial-gradient(circle, rgba(255, 30, 66, 0.2) 0%, rgba(18, 18, 24, 0.8) 80%);
+      border: 1px solid var(--border-crimson);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 34px;
+      margin-bottom: 24px;
+      transition: var(--transition);
+      box-shadow: 0 0 15px rgba(255, 30, 66, 0.2);
+    }
+
+    .hobby-card:hover .hobby-icon-wrap {
+      transform: scale(1.1) rotate(5deg);
+      border-color: var(--crimson-core);
+      box-shadow: 0 0 25px var(--crimson-glow);
+    }
+
+    .hobby-badge {
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      color: var(--crimson-core);
+      background: var(--crimson-soft);
+      padding: 3px 12px;
+      border-radius: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .hobby-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 14px;
+      letter-spacing: 1px;
+    }
+
+    .hobby-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ==========================================================================
+       做過的作品與參加活動 (CTBF 全國菁英聯賽)
+       ========================================================================== */
+    .experience-card {
+      background: linear-gradient(135deg, rgba(25, 15, 20, 0.85) 0%, rgba(14, 14, 18, 0.95) 100%);
+      border: 1px solid var(--border-crimson);
+      border-radius: var(--radius-lg);
+      padding: clamp(28px, 5vw, 48px);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    }
+
+    /* 背景日文文字裝飾 */
+    .exp-bg-watermark {
+      position: absolute;
+      right: -20px;
+      bottom: -30px;
+      font-family: var(--font-display);
+      font-size: clamp(5rem, 12vw, 10rem);
+      color: rgba(255, 30, 66, 0.04);
+      user-select: none;
+      pointer-events: none;
+      line-height: 1;
+    }
+
+    .exp-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .exp-tag-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .gold-seal {
+      background: linear-gradient(135deg, #e5b567 0%, #b38536 100%);
+      color: #1a1202;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      padding: 5px 14px;
+      border-radius: 4px;
+      box-shadow: 0 0 15px rgba(229, 181, 103, 0.3);
+    }
+
+    .official-badge {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--border-subtle);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      padding: 4px 12px;
+      border-radius: 4px;
+    }
+
+    .exp-main-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3.5vw, 2.3rem);
+      color: #fff;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .exp-highlight-sub {
+      color: var(--crimson-core);
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 22px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .exp-text-content {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.85;
+      max-width: 800px;
+      margin-bottom: 30px;
+    }
+
+    .exp-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .exp-stat-box {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--border-subtle);
+      padding: 16px 20px;
+      border-radius: var(--radius-sm);
+    }
+
+    .exp-stat-num {
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: #fff;
+      font-family: var(--font-display);
+    }
+
+    .exp-stat-label {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* ==========================================================================
+       頁尾 FOOTER
+       ========================================================================== */
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 60px 0 40px;
+      text-align: center;
+      background: rgba(6, 6, 9, 0.9);
+      position: relative;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .footer-seal-large {
+      width: 44px;
+      height: 44px;
+      background: var(--crimson-core);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 22px;
+      border-radius: 6px;
+      box-shadow: 0 0 16px var(--crimson-glow);
+      border: 2px solid rgba(255, 255, 255, 0.8);
+      user-select: none;
+    }
+
+    .footer-tagline {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #fff;
+    }
+
+    .footer-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+    }
+
+    /* 回到頂部按鈕 */
+    .back-to-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 48px;
+      height: 48px;
+      background: var(--crimson-core);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 6px 20px var(--crimson-glow);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      transition: var(--transition);
+      z-index: 99;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .back-to-top.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .back-to-top:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 28px rgba(255, 30, 66, 0.6);
+    }
+
+    /* ==========================================================================
+       捲動淡入動畫系統 (Scroll Fade-in Animation)
+       ========================================================================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), 
+                  transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* 延遲動畫階層 */
+    .delay-1 { transition-delay: 0.15s; }
+    .delay-2 { transition-delay: 0.3s; }
+    .delay-3 { transition-delay: 0.45s; }
+
+    /* ==========================================================================
+       響應式設計 (RWD: 手機與平板適配)
+       ========================================================================== */
+    @media (max-width: 900px) {
+      .hero-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 50px;
+      }
+
+      .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero-name {
+        justify-content: center;
+      }
+
+      .hero-tags {
+        justify-content: center;
+      }
+
+      .hero-cta {
+        justify-content: center;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hobbies-grid {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links {
+        display: none; /* 手機端簡化導覽，保持清爽 */
+      }
+      
+      section {
+        padding: 70px 0;
+      }
+
+      .glass-card {
+        padding: 24px 20px;
+      }
+
+      .hero-quote-card {
+        padding: 16px 18px;
+        margin: 20px 0;
+      }
+
+      .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 42px;
+        height: 42px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 頂部導航 -->
+  <header class="nav-bar">
+    <a href="#" class="nav-brand">
+      <div class="hanko-seal">聖</div>
+      <span class="nav-title">陳聖諺</span>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#about">關於我</a></li>
+        <li><a href="#skills">格鬥專長</a></li>
+        <li><a href="#hobbies">熱血興趣</a></li>
+        <li><a href="#experience">賽事成就</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO 主視覺區塊 -->
+    <section class="hero-section" id="about">
+      <div class="container">
+        <div class="hero-wrapper">
+          
+          <!-- 左側介紹文案 -->
+          <div class="hero-content reveal">
+            <div class="vertical-badge">
+              <span>✦</span>
+              <span>日系風格・拳擊熱血魂</span>
+            </div>
+
+            <div class="hero-name-group">
+              <span class="hero-name-en">CHEN SHENG-YAN</span>
+              <h1 class="hero-name">
+                陳 聖諺
+                <span class="hanko-seal" style="width: 38px; height: 38px; font-size: 20px;">聖</span>
+              </h1>
+            </div>
+
+            <!-- 一句話介紹自己 -->
+            <div class="hero-quote-card">
+              <div class="quote-label">一句話介紹自己</div>
+              <div class="quote-content">
+                我是 <span class="quote-highlight">大帥哥</span> 🥊
+              </div>
+            </div>
+
+            <!-- 標籤特色 -->
+            <div class="hero-tags">
+              <div class="hero-tag">🥊 CTBF 全國菁英賽選手</div>
+              <div class="hero-tag">📱 手遊戰術家</div>
+              <div class="hero-tag">🖥️ 電腦遊戲高玩</div>
+              <div class="hero-tag">🔥 熱血不服輸</div>
+            </div>
+
+            <!-- 動作按鈕 -->
+            <div class="hero-cta">
+              <a href="#skills" class="btn btn-primary">
+                探索格鬥專長
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
+              </a>
+              <a href="#experience" class="btn btn-secondary">
+                CTBF 賽事經歷
+              </a>
+            </div>
+          </div>
+
+          <!-- 右側日系戰意視覺徽章 -->
+          <div class="hero-visual reveal delay-1">
+            <div class="visual-circle-outer">
+              <div class="visual-circle-inner">
+                <div class="visual-kanji">拳</div>
+                <div class="visual-sub">BOXING SPIRIT</div>
+              </div>
+            </div>
+
+            <!-- 浮動卡片裝飾 -->
+            <div class="visual-floating-card card-pos-1">
+              <span>⚡</span> 爆發力 & 反應速度
+            </div>
+            <div class="visual-floating-card card-pos-2">
+              <span>🏆</span> CTBF 聯賽認證
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 專長技能區塊 -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">SPECIALTY & SKILL</span>
+          <h2 class="section-title">擅長技能</h2>
+          <p class="section-subtitle">擂台之上，每一記刺拳與閃躲皆是意志的磨練</p>
+        </div>
+
+        <div class="skills-grid">
+          
+          <!-- 主要專長卡片 -->
+          <div class="glass-card reveal">
+            <div class="skill-main-header">
+              <div class="icon-badge">🥊</div>
+              <div class="skill-title-text">
+                <h3>擅長：打拳擊 (Boxing)</h3>
+                <p>CTBF 全國菁英聯賽實戰歷練</p>
+              </div>
+            </div>
+
+            <p class="skill-desc">
+              對拳擊有著極高的熱忱與專注力。從基本步法、節奏變換到實戰對抗，在反覆的高強度訓練中雕琢精準打擊與閃避反應。拳擊不僅是肉體的碰撞，更是心智與冷靜判斷的終極考驗。
+            </p>
+
+            <!-- 戰鬥能力條 (捲動到視窗時觸發寬度動畫) -->
+            <div class="skill-meter-list">
+              <div class="meter-item">
+                <div class="meter-label-row">
+                  <span>直拳與組合拳打擊力 (Punch Power)</span>
+                  <span class="meter-val" data-target="92%">0%</span>
+                </div>
+                <div class="meter-track">
+                  <div class="meter-fill" data-width="92%"></div>
+                </div>
+              </div>
+
+              <div class="meter-item">
+                <div class="meter-label-row">
+                  <span>閃躲與反應敏捷度 (Reflex & Agility)</span>
+                  <span class="meter-val" data-target="95%">0%</span>
+                </div>
+                <div class="meter-track">
+                  <div class="meter-fill" data-width="95%"></div>
+                </div>
+              </div>
+
+              <div class="meter-item">
+                <div class="meter-label-row">
+                  <span>擂台耐力與抗壓心態 (Endurance & Mentality)</span>
+                  <span class="meter-val" data-target="96%">0%</span>
+                </div>
+                <div class="meter-track">
+                  <div class="meter-fill" data-width="96%"></div>
+                </div>
+              </div>
+
+              <div class="meter-item">
+                <div class="meter-label-row">
+                  <span>賽事戰術解析與洞察 (Fight IQ)</span>
+                  <span class="meter-val" data-target="88%">0%</span>
+                </div>
+                <div class="meter-track">
+                  <div class="meter-fill" data-width="88%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 右側格鬥哲學小卡 -->
+          <div class="tactics-box reveal delay-1">
+            <div class="tactic-card">
+              <div class="tactic-title">
+                <span>✦</span> 堅毅不拔的意志 (不撓不屈)
+              </div>
+              <div class="tactic-desc">
+                不論對手多強悍，鈴聲響起便全力以赴。拳擊教會我如何在逆境中保持呼吸與節奏。
+              </div>
+            </div>
+
+            <div class="tactic-card">
+              <div class="tactic-title">
+                <span>✦</span> 瞬息萬變的動態視力
+              </div>
+              <div class="tactic-desc">
+                捕捉對手微小的肩膀晃動與破綻，在毫秒間做出反擊（Counter），精準且致命。
+              </div>
+            </div>
+
+            <div class="tactic-card">
+              <div class="tactic-title">
+                <span>✦</span> 跨領域的專注轉換
+              </div>
+              <div class="tactic-desc">
+                拳擊培養出的超群反射神經，更完美同步移植到電腦與手機遊戲的毫秒級微操。
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 三大興趣區塊 -->
+    <section id="hobbies">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">PASSIONS & LIFESTYLE</span>
+          <h2 class="section-title">熱血興趣</h2>
+          <p class="section-subtitle">遊戲世界開拓視野，拳擊擂台淬鍊靈魂</p>
+        </div>
+
+        <div class="hobbies-grid">
+          
+          <!-- 興趣 1: 打手機遊戲 -->
+          <div class="hobby-card reveal delay-1">
+            <div class="hobby-icon-wrap">📱</div>
+            <span class="hobby-badge">INTEREST 01</span>
+            <h3 class="hobby-title">打手機遊戲</h3>
+            <p class="hobby-desc">
+              隨時隨地的掌上戰場！擅長靈活走位、戰略判斷與即時連線對抗。利用零碎時間不斷鑽研技巧與戰術，享受隨身極速競技的刺激爽感。
+            </p>
+          </div>
+
+          <!-- 興趣 2: 玩電腦遊戲 -->
+          <div class="hobby-card reveal delay-2">
+            <div class="hobby-icon-wrap">🖥️</div>
+            <span class="hobby-badge">INTEREST 02</span>
+            <h3 class="hobby-title">玩電腦遊戲</h3>
+            <p class="hobby-desc">
+              沉浸於極致高幀率與宏大世界觀。無論是考驗精準瞄準的射擊競技，還是考驗大局觀與團隊配合的策略大作，鍵鼠在手便能掌控全場。
+            </p>
+          </div>
+
+          <!-- 興趣 3: 打拳擊 -->
+          <div class="hobby-card reveal delay-3">
+            <div class="hobby-icon-wrap">🥊</div>
+            <span class="hobby-badge">INTEREST 03</span>
+            <h3 class="hobby-title">打拳擊</h3>
+            <p class="hobby-desc">
+              純粹的力量、速度與汗水交織。從沙包訓練到實戰對打，將每一次出拳都視作自我突破，是強健體魄、保持自信與燃燒熱血的終極方式。
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 經歷與作品區塊 (CTBF 全國菁英聯賽) -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">TOURNAMENT & MILESTONES</span>
+          <h2 class="section-title">活動與賽事歷練</h2>
+          <p class="section-subtitle">踏上最高水準的競技舞台，以拳會友</p>
+        </div>
+
+        <div class="experience-card reveal">
+          <div class="exp-bg-watermark">精鋭</div>
+
+          <div class="exp-header-row">
+            <div class="exp-tag-group">
+              <span class="gold-seal">★ 全國聯賽出賽經歷</span>
+              <span class="official-badge">中華民國拳擊協會 (CTBF) 賽事</span>
+            </div>
+            <div style="color: var(--gold-accent); font-weight: 700; font-size: 0.9rem;">
+              全國菁英聯賽
+            </div>
+          </div>
+
+          <h3 class="exp-main-title">打過 CTBF 舉辦的全國菁英拳擊聯賽</h3>
+          
+          <div class="exp-highlight-sub">
+            <span>🔥</span>
+            <span>「站上全國頂尖擂台，每一秒都是毫無保留的熱血硬碰硬。」</span>
+          </div>
+
+          <p class="exp-text-content">
+            參加由中華民國拳擊協會（CTBF）主辦之「全國菁英拳擊聯賽」，與來自全台各地的頂尖拳手同台交鋒。經歷高強度的過磅減重、體能備戰與實戰對決，不僅檢驗了長期以來的訓練成果，更深刻體會到頂尖賽事所需的心智抗壓性與瞬時戰術應變。這段珍貴的征戰歷練，是我人生中不可磨滅的熱血印記！
+          </p>
+
+          <!-- 關鍵數據展示 -->
+          <div class="exp-stats-grid">
+            <div class="exp-stat-box">
+              <div class="exp-stat-num">CTBF</div>
+              <div class="exp-stat-label">全國權威級拳擊賽事平台</div>
+            </div>
+
+            <div class="exp-stat-box">
+              <div class="exp-stat-num">100%</div>
+              <div class="exp-stat-label">專注備戰與全力以赴的鬥志</div>
+            </div>
+
+            <div class="exp-stat-box">
+              <div class="exp-stat-num">ELITE</div>
+              <div class="exp-stat-label">全國菁英擂台實戰淬鍊</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 頁尾 -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-seal-large">聖</div>
+        <div class="footer-tagline">陳聖諺 ｜ 大帥哥・熱血拳擊・極致遊戲</div>
+        <p class="footer-meta">
+          和風墨黑 × 緋紅美學 設計 ✦ © 2026 CHEN SHENG-YAN. ALL RIGHTS RESERVED.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 回到頂部按鈕 -->
+  <a href="#" class="back-to-top" id="backToTop" aria-label="回到頂部">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </a>
+
+  <!-- ==========================================================================
+       JAVASCRIPT: 捲動淡入、技能條動畫與互動
+       ========================================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. 捲動淡入動畫 (Intersection Observer)
+      const revealElements = document.querySelectorAll('.reveal');
+
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            
+            // 如果該區塊內含有進度條，觸發進度條寬度與數字滾動
+            const fills = entry.target.querySelectorAll('.meter-fill');
+            fills.forEach(fill => {
+              const targetWidth = fill.getAttribute('data-width');
+              if (targetWidth) {
+                fill.style.width = targetWidth;
+              }
+            });
+
+            const vals = entry.target.querySelectorAll('.meter-val');
+            vals.forEach(val => {
+              const targetStr = val.getAttribute('data-target');
+              if (targetStr) {
+                const targetNum = parseInt(targetStr, 10);
+                animateCounter(val, targetNum);
+              }
+            });
+
+            // 一旦觸發便持續保持顯示
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      revealElements.forEach(el => revealObserver.observe(el));
+
+      // 數字動態遞增動畫
+      function animateCounter(element, target) {
+        let current = 0;
+        const duration = 1200;
+        const stepTime = 25;
+        const steps = duration / stepTime;
+        const increment = target / steps;
+
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            element.textContent = target + '%';
+            clearInterval(timer);
+          } else {
+            element.textContent = Math.floor(current) + '%';
+          }
+        }, stepTime);
+      }
+
+      // 2. 回到頂部按鈕狀態監聽
+      const backToTopBtn = document.getElementById('backToTop');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+          backToTopBtn.classList.add('active');
+        } else {
+          backToTopBtn.classList.remove('active');
+        }
+      });
+
+      // 3. 點擊滑順捲動
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            return;
+          }
+          const targetElem = document.querySelector(targetId);
+          if (targetElem) {
+            e.preventDefault();
+            targetElem.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
